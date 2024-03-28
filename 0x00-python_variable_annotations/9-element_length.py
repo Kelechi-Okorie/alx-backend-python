@@ -1,13 +1,17 @@
-def example_function(a: int, b: str) -> float:
+#!/usr/bin/env python3
+
+from typing import List, Tuple
+
+
+def element_length(lst: List[str]) -> List[Tuple[str, int]]:
     """
-    An example function with type annotations.
+    Annotate the parameters and return values of the element_length function.
 
     Parameters:
-        a (int): An integer parameter.
-        b (str): A string parameter.
+        lst (List[str]): A list of strings.
 
     Returns:
-        float: The result of some computation.
+        List[Tuple[str, int]]: A list of tuples where each tuple contains
+            an element from the input list and its corresponding length.
     """
-    # Function body
-    return 3.14
+    return [(i, len(i)) for i in lst]
